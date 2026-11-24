@@ -8,15 +8,15 @@ A make.fun entry for the [news-image-20261124](https://make.fun/bounty/news-imag
 
 ## The image
 
-A newspaper front page, drawn by `compose.py` (Pillow) from a generated hero photograph of an oil tanker in the Strait of Hormuz at dusk. Every story is the day's news as reported on the morning of Tuesday 24 November 2026 (WIB), verified against live reporting:
+A newspaper front page, drawn by `compose.py` (Pillow) from a generated hero photograph of an oil tanker in the Strait of Hormuz at dusk. Every story is the day's news as reported on the afternoon of Tuesday 24 November 2026 (WIB), verified against live reporting:
 
-1. Mediators float a two-day Hormuz deal — Qatar-led mediators propose the US lifts its naval blockade on day one and the strait reopens on day two; neither side has agreed yet, and Trump says he will decide soon on new strikes (Axios via CGN Today; Particle News).
-2. Ukraine sinks a Russian warship in Libya — seven sea drones sank the corvette Merkury in Benghazi and hit the cargo ship MV Angara; a Ka-27 helicopter was destroyed (CNN; Reuters; AP).
-3. 24 dead in a Banten factory fire — rescuers keep searching for about 30 missing workers at the PT Fonusa Agung Mulia (Milkita) candy plant in Cikande (Reuters).
-4. India hands Nepal a Rs 15,000 crore package — Modi and Balendra Shah flag off the Saryu-Kamala Express between Ayodhya and Janakpur and sign eight pacts (PTI).
-5. $6 trillion wiped off US stocks — the Nasdaq is down 20% from its peak; Trump blames Democrats "100%" while his Treasury chief cites a mix of factors (Truth Social via Breitbart; BigGo Finance).
-6. New Zealand hang on for a draw — Mitchell and Phillips bat out 120 overs to deny India after its 720/9 declared in Wellington (ESPNcricinfo; AP).
+1. Three tankers burn in Hormuz — Iran's Revolutionary Guard says three tankers caught fire on Monday after hitting naval mines; six vessels have been hit since Sunday. The US is probing cyberattacks on tankers (Reuters; AP; IRGC Navy statements).
+2. UN warns Libya must not become a battleground — Ukrainian strikes hit Russian warships off Libya; a drone-debris fire burns in Kyiv.
+3. 24 dead in a Banten factory fire — rescuers keep searching for about 30 missing workers at the PT Fonusa Agung Mulia (Milkita) candy plant in Cikande; DNA tests will take weeks (Reuters; AP).
+4. COP31 talks falter in Türkiye — climate negotiations stall over fossil fuels as Saudi Arabia's role draws blame.
+5. SK Hynix jumps as Huang returns to Nvidia — shares rise 20% after Jensen Huang is reinstated as chief; US lawmakers push China chip rules.
+6. Trump's 28-point plan for Ukraine peace — European leaders gather in Stockholm for the Crimea Platform summit.
 
 ## The program
 
-`main.ts` (Node 22, standard library only) copies the repo's `entry.png` to `/output/entry.png` (`MAKEFUN_OUTPUT_DIR` stands in for `/output` locally). The image is a 1024x1024 PNG under 1 MiB. Two runs write byte-identical output, because the program copies a fixed file.
+`main.ts` (Node 22, standard library only) copies the repo's `entry.png` to `/output/entry.png` (`MAKEFUN_OUTPUT_DIR` stands in for `/output` locally). The image is a 1024x1024 PNG under 1 MiB. Two runs write byte-identical output, because the program copies a fixed file. The program also creates the output directory if needed, checks the file is really a PNG, and refuses images over the 1 MiB limit.
